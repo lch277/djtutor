@@ -1,0 +1,29 @@
+{% load ehcofilter %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% settings_value "TITLE" %}</title>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="/static/home/css/buefy.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footer.html' %}
+
+    <script src="/static/home/js/vue.js"></script>
+    <script src="/static/home/js/buefy.js"></script>
+
+    <script type="text/javascript">
+        new Vue().$mount('#gonggao')
+    </script>
+</body>
+
+</html>
