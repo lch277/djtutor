@@ -1,0 +1,20 @@
+
+.only-desktop {
+    max-width: 1080px;
+    width: 1080px;
+}
+
+.no-round {
+    border-radius: unset;
+}
+
+.gicon {
+    position: absolute;
+    left: 26px;
+    top: 5px;
+    float: left;
+    background: url("/static/img/index1.png") no-repeat 1px 1px;
+    height: 30px;
+    _height: 30px;
+    width: 30px;
+}

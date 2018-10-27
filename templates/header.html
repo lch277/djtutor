@@ -1,14 +1,18 @@
 <!-- 公告 -->
-<div class="container" id="gonggao">
-    <section>
-        <b-notification type="is-warning" style="margin: 5px 0">
-            测试公告vue
-        </b-notification>
-    </section>
+<div class="container only-desktop" id="gonggao">
+{#    <section>#}
+{#        <b-notification type="is-warning" style="margin: 5px 0">#}
+{#            测试公告vue#}
+{#        </b-notification>#}
+{#    </section>#}
+    <div class="notification is-warning no-round" v-if="!closed" style="margin: 5px 0">
+      <button class="delete" v-on:click="closeNotify"></button>
+      测试公告vue
+    </div>
 </div>
 <!-- 顶层小菜单导航 -->
 <div class="has-background-light">
-    <nav class="container level">
+    <nav class="container only-desktop level">
         <div class="level-left">
             <div class="level-item">
                 欢迎来到<a class="button is-light" href="/">中山快印网</a>！
@@ -35,7 +39,7 @@
 </div>
 
 <!-- logo 导航 -->
-<div class="container level" style="padding-top: 1.5rem;">
+<div class="container only-desktop level" style="padding-top: 1.5rem;">
         <div class="level-left">
             <div>
                 <img alt="华亚快印--商务印刷网" src="/static/img/logo.png">
@@ -71,3 +75,17 @@
         </div>
 
 </div>
+
+<script type="text/javascript">
+    new Vue({
+        el: '#gonggao',
+        data: {
+          closed: false
+        },
+        methods: {
+            closeNotify: function() {
+                this.closed = true
+            }
+        }
+    })
+</script>
