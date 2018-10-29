@@ -15,11 +15,28 @@
     position: relative;
 }
 .nav-box .nav-main {
+    margin: 0 auto;
     height: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    background-color: transparent;
+}
+.nav-box .nav-main .nav-btn {
+    width: 100px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    text-align: center;
+    justify-content: center;
+}
+.nav-box .nav-main .nav-btn.selected,
+.nav-box .nav-main .nav-btn:hover {
+    background-color: #fe3800;
 }
 .nav-box .nav-main .nav-head {
     position: relative;
-    background-color: #982D03;
+    /*background-color: #982D03;*/
     width: 175px;
 }
 .nav-box .nav-main .nav-head .gicon {
@@ -42,4 +59,10 @@
     font-family: 微软雅黑;
     height: 36px;
 }
+/*.nav-box .nav-main .nav-head .nav-head-btn.selected,*/
+/*.nav-box .nav-main .nav-head .nav-head-btn:hover {*/
+    /*background-color: #fe3800;*/
 
+.nav-box .nav-main .nav-head .nav-dropdown {
+
+}
