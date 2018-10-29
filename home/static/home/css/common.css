@@ -8,13 +8,38 @@
     border-radius: unset;
 }
 
-.gicon {
-    position: absolute;
-    left: 26px;
-    top: 5px;
-    float: left;
-    background: url("/static/img/index1.png") no-repeat 1px 1px;
-    height: 30px;
-    _height: 30px;
-    width: 30px;
+
+.nav-box {
+    background: none repeat scroll 0 0 #D03800;
+    height: 36px;
+    position: relative;
 }
+.nav-box .nav-main {
+    height: 36px;
+}
+.nav-box .nav-main .nav-head {
+    position: relative;
+    background-color: #982D03;
+    width: 175px;
+}
+.nav-box .nav-main .nav-head .gicon {
+    /*position: absolute;*/
+    /*left: 26px;*/
+    /*top: 5px;*/
+    /*float: left;*/
+    background: url("/static/img/index1.png") no-repeat 1px 1px;
+    height: 24px;
+    _height: 24px;
+    width: 36px;
+}
+.nav-box .nav-main .nav-head .nav-head-btn {
+    width: 175px;
+    background-color: #982D03;
+    border-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    height: 36px;
+}
+
