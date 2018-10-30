@@ -97,7 +97,7 @@
     background-repeat: no-repeat;
     background-color: #fc8029;
 }
-.nav-box .nav-main .nav-head .nav-dropdown .li:hover {
+.nav-box .nav-main .nav-head .nav-dropdown .li.selected {
     z-index:110;
     background-color:#fff;
     border-left:2px solid red;
@@ -113,6 +113,9 @@
     line-height: 22px;
     color: #fff;
 }
+.nav-box .nav-main .nav-head .nav-dropdown .li.selected .li-tit {
+    color: black;
+}
 .nav-box .nav-main .nav-head .nav-dropdown .li .li-content {
     padding-left: 15px;
     font-size: 12px;
@@ -120,4 +123,6 @@
     font-size: 12px;
     margin-left: -10px;
 }
-
+.nav-box .nav-main .nav-head .nav-dropdown .li.selected .li-content {
+    color: #666;
+}
