@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <nav-main id="main-navbar"></nav-main>
+    <nav-main :isactive="true"></nav-main>
 
-    <div class="only-desktop" style="margin-bottom: 40px;">
+    <div class="only-desktop" style="margin-bottom: 30px;">
         <div class="media">
             <div class="media-content ad-slide-box" style="">
-
-
+                <carousel></carousel>
             </div>
             <div class="media-right login-info-box" style="">
                 <div class="navbar" style="margin-left: 10px;margin-bottom: 20px; margin-top: 10px;">
@@ -29,31 +28,63 @@
                 </div>
                 <div class="level">
                     <div class="level-item">
-                        <button class="button is-danger no-round">立即登录</button>
+                        <a class="button is-danger no-round" href="/login">立即登录</a>
                     </div>
                     <div class="level-item">
-                        <button class="button is-danger no-round">免费注册</button>
+                        <a class="button is-danger no-round" href="/login">免费注册</a>
                     </div>
                 </div>
                 <div class="level">
+                    <div class="level-item">
                     <a class="button is-small is-white" href="">订单查询</a>
+                    </div>
+                    <div class="level-item">
                     <a class="button is-small is-white" href="">在线报价</a>
+                    </div>
+                    <div class="level-item">
                     <a class="button is-small is-white" href="">上传文件</a>
+                    </div>
                 </div>
                 <div class="level">
+                    <div class="level-item">
                     <a class="button is-small is-white" href="">视频教程</a>
+                    </div>
+                    <div class="level-item">
                     <a class="button is-small is-white" href="">优惠券</a>
+                    </div>
+                    <div class="level-item">
                     <a class="button is-small is-white" href="">积分兑换</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="level" style="margin-top: 10px;">
+        <div class="level" style="margin-top: 7px;">
 {#            <div class="level-left">#}
-                <div class="" style="width: 175px;height: 175px; border: 1px solid grey;"></div>
-                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
-                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
-                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
-                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
+                <div class="" style="width: 175px;height: 175px; border: 0px solid grey;">
+                    <a href="/qts/quo_price/quotation?product_code=HB001&amp;id=1&amp;intype=web" title="特价爆款">
+                        <img width="175" height="175" src="/static/img/chanpintuijian.png" alt="特价爆款">
+                    </a>
+                </div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
+                    <a href="/qts/quo_price/quotation?product_code=HB006&amp;id=14&amp;intype=web" title="纸杯">
+                        <img width="219" height="175" src="/static/img/3b413911e0873fc6a028acb70cd4fce4MhyrqQ9CUh12465.png" alt="纸杯">
+                    </a>
+                </div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
+                    <a href="/qts/quo_price/quotation?product_code=HB005&amp;id=12&amp;intype=web" title="高档特种纸名片">
+                        <img width="219" height="175" src="/static/img/acf33fcbd992a6a9190ac71ab51e5480cmK0eiuPxq14015.png" alt="高档特种纸名片">
+                    </a>
+                </div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
+                    <a href="/qts/quo_price/quotation?product_code=HB004&amp;id=5&amp;intype=web" title="水胶特光不干胶">
+                        <img width="219" height="175" src="/static/img/81f7d7d3b36156b6576a8ee3578a7596oHqYtV1aiB61805.png" alt="水胶特光不干胶">
+                    </a>
+                </div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
+                    <a href="/qts/quo_price/quotation?product_code=ZB002&amp;id=2&amp;intype=web" title="精美铜版纸画册">
+                        <img width="219" height="175" src="/static/img/b2e88a8f65752b383d14fde0c315c0ebRhw8KBcn0991241.png" alt="精美铜版纸画册">
+                    </a>
+                </div>
 {#            </div>#}
         </div>
 
@@ -200,6 +231,7 @@
 
 {% block scripts %}
     {% include 'components/nav.html' %}
+    {% include 'components/carousel.html' %}
     <script type="text/javascript">
         new Vue({
             delimiters:['[[', ']]'],

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <nav-main></nav-main>
+
+    <div class="only-desktop" style="margin-top: 10px; margin-bottom: 30px;">
+        <div style="background-image: url('/static/img/20181023161016Disl6oA1b51F8h1678.png');height: 500px;">
+        <div class="login-box">
+            <div class="login-desc">会员登录</div>
+            <form id="formdata" name="submit" method="post" action="/auth/login" novalidate="novalidate">
+                <div class="login-message">
+                    <dl class="reg_item">
+                        <dt><label for="username">登陆账号：</label></dt>
+                        <dd><input type="text" maxlength="50" tabindex="1" placeholder="会员号/手机号" name="username" id="username" class="txt {required:true,messages:{required:'请填写登陆账号'}}">
+
+                        </dd>
+                        <dt><label for="password">登陆密码：</label></dt>
+                        <dd><input type="password" maxlength="50" tabindex="4" name="password" id="password" class="txt {required:true,messages:{required:'请填写登陆密码'}}">  </dd>
+                        <dt style="display: none"><label for="txt_code">图形验证：</label></dt>
+                        <dd style="display: none"><input type="text" tabindex="11" placeholder="请输入验证码" name="img_code" id="img_code" class="txt {required:false,messages:{required:'请填写验证码'}}">
+                            <span class="red">*</span>
+                            <img width="85" height="35" class="ml10 changeusercode" alt="验证码" id="img_regcode" src="/user_checkcode.php?type=user_regcode">
+                            <a tabindex="6" class="changeCode in-bl gray ml10 changeusercode" href="javascript:void(0)">看不清？</a>
+                        </dd>
+                        <!--<dt class="txt_code"></dt> -->
+                    </dl>
+                    <input type="submit" style="margin-left:50px;" tabindex="8" value="立即登陆" class="btn btn-orange hn" name="btn_submit" id="btn_submit">
+                </div>
+                <input type="hidden" name="sub" value="sub">
+                <div class="login-foot">
+                	<label for="loginday"><input type="checkbox" tabindex="7" id="loginday" value="7" name="loginday" checked="checked">7天内免登陆</label>
+                    <a style="margin-right: 5px" class="green" href="/member/index/findpwd">找回密码</a>
+                    <a style="margin-right: 5px" class="green" href="/member/index/reg">注册会员</a>
+                </div>
+                <span id="status"></span>
+            </form>
+        </div>
+        <!--<div id="regBox">
+            <div style="margin-top:100px;" class="regBox_inner">
+                <p class="gray hn">还没有注册？</p>
+                <a href="/member/index/reg" class="btn btn-gray hn mt20" id="reg">立即注册</a>
+            </div>
+            <div class="service" style="height: 100px;">
+            </div>
+        </div>-->
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    {% include 'components/nav.html' %}
+    <script type="text/javascript">
+        new Vue({
+            delimiters:['[[', ']]'],
+            el: "#app"
+        })
+    </script>
+{% endblock %}
