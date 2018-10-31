@@ -7,26 +7,22 @@
     <title>{% settings_value "TITLE" %}</title>
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-{#    <link rel="stylesheet" href="/static/home/css/buefy.css">#}
     <link rel="stylesheet" href="/static/home/css/bulma.css">
     <link rel="stylesheet" href="/static/home/css/common.css">
-    <script src="/static/home/js/vue.js"></script>
 </head>
 
 <body>
-<script type="text/javascript">
-    Vue.config.delimiters = ["[[", "]]"]
-</script>
-
-    {% include 'header.html' %}
-
-    {% block content %}
-    {% endblock %}
-
+    <div id="app">
+        {% include 'header.html' %}
+        {% block content %}
+        {% endblock %}
+    </div>
     {% include 'footer.html' %}
 
-{#    <script src="/static/home/js/buefy.js"></script>#}
-
+    <script src="/static/home/js/vue.js"></script>
+    {% include 'components/notification.html' %}
+    {% block scripts %}
+    {% endblock %}
 </body>
 
 </html>

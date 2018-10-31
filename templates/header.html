@@ -1,14 +1,10 @@
 <!-- 公告 -->
 <div class="container only-desktop" id="gonggao">
-{#    <section>#}
-{#        <b-notification type="is-warning" style="margin: 5px 0">#}
-{#            测试公告vue#}
-{#        </b-notification>#}
-{#    </section>#}
-    <div class="notification is-warning no-round" v-if="!closed" style="margin: 5px 0">
-      <button class="delete" v-on:click="closeNotify"></button>
-      测试公告vue
-    </div>
+{#    <div class="notification is-warning no-round" v-if="!closed" style="margin: 5px 0">#}
+{#      <button class="delete" v-on:click="closeNotify"></button>#}
+{#      测试公告vue#}
+{#    </div>#}
+    <notification><h2>测试公告vue</h2></notification>
 </div>
 <!-- 顶层小菜单导航 -->
 <div class="has-background-light">
@@ -75,17 +71,3 @@
         </div>
 
 </div>
-
-<script type="text/javascript">
-    new Vue({
-        el: '#gonggao',
-        data: {
-          closed: false
-        },
-        methods: {
-            closeNotify: function() {
-                this.closed = true
-            }
-        }
-    })
-</script>

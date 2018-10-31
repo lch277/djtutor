@@ -1,260 +1,175 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div id="main-navbar" class="nav-box">
-        <nav class="navbar only-desktop nav-main" role="navigation" aria-label="main navigation">
-            <div class="navbar-menu"><div class="navbar-start">
-            <div class="navbar-item nav-head has-dropdown is-active">
-                <a class="nav-head-btn navbar-link is-arrowless">
-                    <span class="gicon"></span>
-                    <span class="gtitle">产品分类信息</span>
-                </a>
-                <div class="navbar-dropdown nav-dropdown">
-                    <cate-groups v-for="cate in categorys" :category="cate"></cate-groups>
-                </div>
+    <nav-main id="main-navbar"></nav-main>
 
-{#                <script type="text/javascript">#}
-{#                    $(function () {#}
-{#                        $(".glist .li").hover(function () {#}
-{#                            $(this).find('.i-list').show().end().addClass("selected1").find('.li-tit').css('color', 'black');#}
-{#                            $(this).find('.i-list').show().end().addClass("selected1").find('.li-content a').css('color', '#666');#}
-{#                        }, function () {#}
-{#                            $(this).find('.i-list').hide().end().removeClass("selected1").find('.li-tit').css('color', '');#}
-{#                            $(this).find('.i-list').hide().end().removeClass("selected1").find('.li-content a').css('color', '');#}
-{#                        });#}
-{#                    });#}
-{#                </script>#}
+    <div class="only-desktop" style="margin-bottom: 40px;">
+        <div class="media">
+            <div class="media-content ad-slide-box" style="">
+
+
             </div>
-            <a class="navbar-item nav-btn selected">首页</a>
-            <a class="navbar-item nav-btn">在线报价</a>
-            <a class="navbar-item nav-btn">下载专区</a>
-            </div></div>
-        </nav>
+            <div class="media-right login-info-box" style="">
+
+            </div>
+        </div>
+        <div class="level" style="margin-top: 10px;">
+{#            <div class="level-left">#}
+                <div class="" style="width: 175px;height: 175px; border: 1px solid grey;"></div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
+                <div style="width: 219px;height: 175px;margin-left: 7px; border: 1px solid grey;"></div>
+{#            </div>#}
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">广告产品 </span>
+                    <span class="is-size-7">广告材料加工&nbsp; &nbsp; 厂家直送全部</span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">广告纸杯 </span>
+                    <span class="is-size-7">1千个起印</span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">热销名片</span>
+                    <span class="is-size-7">众多产品 供您选择</span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">办公印品</span>
+                    <span class="is-size-7"></span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">宣传单张</span>
+                    <span class="is-size-7">最低惊爆价</span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">企业画册</span>
+                    <span class="is-size-7">全新机印刷全部</span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">不干胶</span>
+                    <span class="is-size-7"></span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
+
+        <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
+            <div style="border-left: 7px solid #D13800; padding-left: 10px;">
+                <p><span class="is-size-5">数码快印</span>
+                    <span class="is-size-7">一张起印</span></p>
+            </div>
+            <div class="level-right">
+                <a class="button is-danger is-small" style="padding: 0.2em;height: 1.5em;background-color: #D13800;">全部</a>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline">
+            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+        </div>
     </div>
 
-    <script type="text/javascript">
-        Vue.component('cate-groups', {
-            props: ['category'],
-            data: function() {
-               return {
-                   isSel: false
-               }
-            },
-            template: `
-                <div class="li" @mouseover="onCateOver" @mouseleave="onCateLeave" :class="{selected: isSel}">
-                    <div class="li-tit" style="">[[ category.title ]]</div>
-                    <div class="li-content">
-                        <a href="javascript:void(0)" style="">
-                            [[ category.summary ]] </a>
-                    </div>
-                    <div class="i-list" style="margin-top: -285px; display: none;">
-                        <div class="lt">
-                            <dl class="firstdl">
-                                <template v-for="group in category.groups">
-                                    <dt class="firstdd1" :key="group.id">
-                                        <div :class="'status'+group.status"></div>
-                                        <a :title="group.name"
-                                           href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web ">[[ group.name ]]</a>
-                                        <div style="width:52.8px"></div>
-                                    </dt>
-                                    <dd class="firstdd2" v-for="item in group.items" :key="item.id">
-                                        <div :class="'status'+item.status"></div>
-                                        <a :title="item.name"
-                                           href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web "
-                                           :class="'statusa'+item.status">item.name</a>
-                                    </dd>
-                                </template>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            `,
-            methods: {
-                onCateOver: function(event) {
-                    this.isSel = true
-                },
-                onCateLeave: function(event) {
-                    this.isSel = false
-                }
-            }
-        });
+{% endblock content %}
 
+{% block scripts %}
+    {% include 'components/nav.html' %}
+    <script type="text/javascript">
         new Vue({
-            el: "#main-navbar",
-            data: {
-                categorys: [
-                    {
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },{
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },{
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },{
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },{
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },{
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },{
-                        title: '名片 PVC名片',
-                        summary: '铜版纸名片 特种纸名片',
-                        groups: {
-                            name: '特种纸名片',
-                            status: 0,
-                            items: [
-                                {name: '冰白纸', status: 2},
-                                {name: '安格纸', status: 2},
-                                {name: '刚古纸', status: 0},
-                                {name: '合成纸', status: 0},
-                                {name: '蛋壳纸', status: 0},
-                                {name: '布纹纸', status: 2},
-                                {name: '荷兰白', status: 2},
-                                {name: '幻彩纸', status: 1},
-                                {name: '蝶影纹', status: 1},
-                                {name: '白宝星', status: 1},
-                                {name: '港纹纸', status: 1},
-                                {name: '丝棉纸', status: 1},
-                                {name: '磨砂水晶', status: 2},
-                                {name: '磨砂铂晶', status: 2},
-                                {name: '星雨纸', status: 1},
-                            ]
-                        }
-                    },
-                ],
-            }
+            delimiters:['[[', ']]'],
+            el: "#app"
         })
     </script>
-
-{% endblock content %}
+{% endblock %}

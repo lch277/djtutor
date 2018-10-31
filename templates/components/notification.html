@@ -1,0 +1,23 @@
+
+<script type="text/javascript">
+    Vue.component('notification', {
+        delimiters:['[[', ']]'],
+        // el: '#gonggao',
+        data: function() {
+            return {
+              closed: false
+            }
+        },
+        methods: {
+            closeNotify: function() {
+                this.closed = true
+            }
+        },
+        template: `
+        <div class="notification is-warning no-round" v-if="!closed" style="margin: 5px 0">
+          <button class="delete" v-on:click="closeNotify"></button>
+          <slot></slot>
+        </div>
+        `
+    })
+</script>

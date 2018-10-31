@@ -1,0 +1,349 @@
+
+<script type="text/javascript">
+        Vue.component('cate-list', {
+            delimiters:['[[', ']]'],
+            props: ['category'],
+            data: function() {
+               return {
+                   isSel: false
+               }
+            },
+            template: `
+            <div class="li" @mouseover="onCateOver" @mouseleave="onCateLeave" :class="{selected: isSel}">
+                <div class="li-tit" style="">[[ category.title ]]</div>
+                <div class="li-content">
+                    <a href="javascript:void(0)" style="">
+                        [[ category.summary ]] </a>
+                </div>
+                <div class="i-list" style="">
+                    <div class="lt">
+                        <dl class="firstdl">
+                            <template v-for="group in category.groups">
+                                <dt class="firstdd1" :key="group.id">
+                                    <div :class="'status'+group.status"></div>
+                                    <a :title="group.name"
+                                       href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web ">[[ group.name ]]</a>
+                                    <div style="width:52.8px"></div>
+                                </dt>
+                                <dd class="firstdd2" v-for="item in group.items" :key="item.id">
+                                    <div :class="'status'+item.status"></div>
+                                    <a :title="item.name"
+                                       href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web "
+                                       :class="'statusa'+item.status">[[ item.name ]]</a>
+                                </dd>
+                            </template>
+                        </dl>
+                    </div>
+                </div>
+            </div>`,
+            methods: {
+                onCateOver: function(event) {
+                    this.isSel = true
+                },
+                onCateLeave: function(event) {
+                    this.isSel = false
+                }
+            }
+        });
+
+        Vue.component('nav-main', {
+            delimiters:['[[', ']]'],
+            data: function() {
+                return {
+                    categorys: [
+                        {
+                            title: '名片 PVC名片',
+                            summary: '铜版纸名片 特种纸名片',
+                            groups: [
+                                {
+                                    name: '特种纸名片',
+                                    status: 0,
+                                    items: [
+                                        {name: '冰白纸', status: 2},
+                                        {name: '安格纸', status: 2},
+                                        {name: '刚古纸', status: 0},
+                                        {name: '合成纸', status: 0},
+                                        {name: '蛋壳纸', status: 0},
+                                        {name: '布纹纸', status: 2},
+                                        {name: '荷兰白', status: 2},
+                                        {name: '幻彩纸', status: 1},
+                                        {name: '蝶影纹', status: 1},
+                                        {name: '白宝星', status: 1},
+                                        {name: '港纹纸', status: 1},
+                                        {name: '丝棉纸', status: 1},
+                                        {name: '磨砂水晶', status: 2},
+                                        {name: '磨砂铂晶', status: 2},
+                                        {name: '星雨纸', status: 1},
+                                    ]
+                                }, {
+                                    name: '铜版纸名片',
+                                    status: 0,
+                                    items: [
+                                        {name: '覆哑膜名片', status: 2},
+                                        {name: '不覆膜名片', status: 0},
+                                        {name: '厂牌', status: 2},
+                                        {name: '吊牌', status: 0},
+                                        {name: '请柬', status: 0},
+                                        {name: '贺卡', status: 0},
+                                        {name: '接送卡', status: 0},
+                                        {name: '积分卡', status: 0},
+                                    ]
+                                }, {
+                                    name: '名片工艺',
+                                    status: 0,
+                                    items: [
+                                        {name: '无色凹凸', status: 0},
+                                        {name: '烫金', status: 2},
+                                        {name: '烫银', status: 0},
+                                        {name: '烫红金', status: 0},
+                                        {name: '烫绿金', status: 0},
+                                        {name: '烫流水号', status: 2},
+                                        {name: '切圆角', status: 0},
+                                        {name: '打孔', status: 0},
+                                        {name: '压线', status: 0},
+                                        {name: '烫蓝金', status: 0},
+                                        {name: '模切', status: 0},
+                                        {name: '针孔线', status: 0},
+                                    ]
+                                }, {
+                                    name: 'PVC名片',
+                                    status: 0,
+                                    items: [
+                                        {name: 'PVC透明名片', status: 0},
+                                        {name: 'PVC普通哑白', status: 0},
+                                        {name: 'PVC磨砂名片', status: 0},
+                                        {name: 'PVC珠光哑面', status: 0},
+                                        {name: 'PVC珠光亮面', status: 0},
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: '彩页',
+                            summary: '合版彩页 专版彩页',
+                            groups: [
+                                {
+                                    name: '按克重分',
+                                    status: 0,
+                                    items: [
+                                        {name: '特价157克铜板纸', status: 2},
+                                        {name: '157克铜版纸', status: 2},
+                                        {name: 'A级157克铜板纸', status: 0},
+                                        {name: '200克铜版纸', status: 0},
+                                        {name: '250克铜板纸', status: 0},
+                                        {name: '300克铜板纸', status: 0},
+                                        {name: '80克双胶纸', status: 1},
+                                        {name: '120克双胶纸', status: 1},
+                                    ]
+                                }, {
+                                    name: '按产品分',
+                                    status: 0,
+                                    items: [
+                                        {name: '宣传彩页', status: 2},
+                                        {name: '折页', status: 2},
+                                        {name: '吊旗', status: 0},
+                                        {name: '海报', status: 0},
+                                        {name: '餐台纸', status: 1},
+                                        {name: '说明书', status: 0},
+                                        {name: '彩色信纸', status: 0},
+                                        {name: '奖票', status: 1},
+                                    ]
+                                }, {
+                                    name: '彩页工艺',
+                                    status: 0,
+                                    items: [
+                                        {name: '对折', status: 2},
+                                        {name: '覆膜', status: 0},
+                                        {name: '烫金', status: 0},
+                                        {name: '模切异型', status: 0},
+                                        {name: '包芯折', status: 2},
+                                        {name: '风琴折', status: 2},
+                                        {name: '4折5页', status: 0},
+                                        {name: '6折7页', status: 1},
+                                        {name: '7折8页', status: 1},
+                                        {name: '胶头', status: 0},
+                                        {name: '针孔线', status: 0},
+                                        {name: '打流水号码', status: 2},
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            title: '画册',
+                            summary: '产品画册 企业画册',
+                            groups: [
+                                {
+                                    name: '按装订方式',
+                                    status: 0,
+                                    items: [
+                                        {name: '骑马钉画册', status: 2},
+                                        {name: '无线胶装画册', status: 0},
+                                        {name: '锁线胶装画册', status: 2},
+                                        {name: '硬壳精装画册', status: 0},
+                                    ]
+                                }, {
+                                    name: '按纸张克重',
+                                    status: 0,
+                                    items: [
+                                        {name: '封面250克内页157克铜版纸', status: 2},
+                                        {name: '整本157克铜板纸', status: 0},
+                                        {name: '封面250铜板内页80克双胶', status: 0},
+                                        {name: '封面冰白纸内页157克双铜', status: 1},
+                                        {name: '封面荷兰白内页80克双胶', status: 1},
+                                    ]
+                                }, {
+                                    name: '画册工艺',
+                                    status: 0,
+                                    items: [
+                                        {name: '封面覆膜', status: 2},
+                                        {name: '封面烫金', status: 2},
+                                        {name: '模切异型', status: 1},
+                                        {name: '封底加封套', status: 0},
+                                        {name: '封面压纹', status: 0},
+                                        {name: '封面UV', status: 2},
+                                        {name: '封面击凸', status: 0},
+                                        {name: '内页过油', status: 1},
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: '不干胶',
+                            summary: '彩色贴纸 标签',
+                            groups: [
+                                {
+                                    name: '合版不干胶',
+                                    status: 0,
+                                    items: [
+                                        {name: '特光不干胶切成品', status: 2},
+                                        {name: '覆亮膜不干胶', status: 2},
+                                        {name: '异型不干胶', status: 0},
+                                    ]
+                                }, {
+                                    name: '专版不干胶',
+                                    status: 0,
+                                    items: [
+                                        {name: '不干胶海报', status: 1},
+                                        {name: '不干胶标签', status: 1},
+                                        {name: '书写纸不干胶', status: 0},
+                                        {name: '铜板纸不干胶', status: 2},
+                                    ]
+                                }, {
+                                    name: '不干胶工艺',
+                                    status: 0,
+                                    items: [
+                                        {name: '覆膜', status: 2},
+                                        {name: '模切异型', status: 1},
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            title: '手提袋 广告纸杯',
+                            summary: '档案袋 信封 封套',
+                            groups: [
+                                {
+                                    name: '手提袋',
+                                    status: 0,
+                                    items: [
+                                        {name: '250克单铜纸手提袋', status: 2},
+                                        {name: '250克双铜纸手提袋', status: 0},
+                                        {name: '白牛皮手提袋', status: 1},
+                                        {name: '黄牛皮手提袋', status: 0},
+                                        {name: '黑卡纸手提袋', status: 0},
+                                    ]
+                                }, {
+                                    name: '粘制品',
+                                    status: 0,
+                                    items: [
+                                        {name: '档案袋', status: 1},
+                                        {name: '封套', status: 2},
+                                        {name: '中式信封', status: 2},
+                                        {name: '西式信封', status: 0},
+                                        {name: '利是封', status: 1},
+                                    ]
+                                }, {
+                                    name: '广告纸杯',
+                                    status: 0,
+                                    items: [
+                                        {name: '278克原木浆9盎司纸杯', status: 1},
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            title: '无碳联单 信纸表格',
+                            summary: '两联 三联 四联 表格 便签 信纸',
+                            groups: [
+                                {
+                                    name: '无碳联单',
+                                    status: 0,
+                                    items: [
+                                        {name: '单联(白)', status: 0},
+                                        {name: '双联(白红)', status: 2},
+                                        {name: '三联(白红黄)', status: 2},
+                                        {name: '四联(白红黄兰)', status: 0},
+                                    ]
+                                }, {
+                                    name: '联单工艺',
+                                    status: 0,
+                                    items: [
+                                        {name: '加封面', status: 0},
+                                        {name: '印封面', status: 0},
+                                        {name: '加卡纸', status: 1},
+                                        {name: '打号码', status: 2},
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            title: '喷绘 水晶字 展架 条幅',
+                            summary: '室内喷绘 室外喷绘',
+                            groups: [
+                                {
+                                    name: '喷绘',
+                                    status: 0,
+                                    items: [
+                                        {name: '室内喷绘', status: 1},
+                                        {name: '室外喷绘', status: 0},
+                                        {name: '灯箱', status: 0},
+                                    ]
+                                }, {
+                                    name: '水晶字',
+                                    status: 0,
+                                    items: [
+                                        {name: '展架', status: 1},
+                                        {name: '易拉宝', status: 0},
+                                    ]
+                                },
+                            ]
+                        },
+                    ],
+                }
+            },
+            template: `
+            <div class="nav-box">
+                <nav class="navbar only-desktop nav-main" role="navigation" aria-label="main navigation">
+                    <div class="navbar-menu">
+                        <div class="navbar-start">
+                            <div class="navbar-item nav-head has-dropdown is-active">
+                                <a class="nav-head-btn navbar-link is-arrowless">
+                                    <span class="gicon"></span>
+                                    <span class="gtitle">产品分类信息</span>
+                                </a>
+                                <div class="navbar-dropdown glist">
+                                    <cate-list v-for="cate in categorys" :category="cate" :key="cate.id"></cate-list>
+                                </div>
+                            </div>
+                            <a class="navbar-item nav-btn selected">首页</a>
+                            <a class="navbar-item nav-btn">在线报价</a>
+                            <a class="navbar-item nav-btn">下载专区</a>
+                        </div>
+                        <div class="navbar-end">
+                            <a class="navbar-item nav-btn nav-cart">购物车</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>`
+        });
+    </script>
