@@ -302,13 +302,16 @@ a.statusa2 {
     left: 650px;
     width: 320px;
     height: 320px;
-    padding: 24px 20px;
+    padding: 16px 12px;
     background-color: #fff;
 }
 .field-label.compact {
-    flex-grow: 1.2;
+    flex-grow: 1;
     margin-right: 0.5rem;
-    padding-top: 0.9rem;
+    padding-top: 0.5rem;
+}
+.field-label.compact .label{
+    font-size: 0.8rem;
 }
 
 

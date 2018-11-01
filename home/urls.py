@@ -20,6 +20,6 @@ app_name = 'home'
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home/index.html'), name='index'),
     path('about/', TemplateView.as_view(template_name='home/about.html'), name='about'),
-    # path('login', TemplateView.as_view(template_name='registration/login.html'), name='login'),
+    path('quote/', TemplateView.as_view(template_name='home/quote.html'), name='login'),
 ]
 

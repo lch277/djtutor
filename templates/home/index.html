@@ -33,17 +33,17 @@
                 <div class="level">
                     {% if user.is_authenticated %}
                     <div class="level-item">
-                        <a class="button is-danger no-round" href="/home/userinfo">用户中心</a>
+                        <a class="button is-danger no-round" href="/userinfo/">用户中心</a>
                     </div>
                     <div class="level-item">
-                        <a class="button is-danger no-round" href="/home/orders">我的订单</a>
+                        <a class="button is-danger no-round" href="/orders/">我的订单</a>
                     </div>
                     {% else %}
                     <div class="level-item">
-                        <a class="button is-danger no-round" href="/login">立即登录</a>
+                        <a class="button is-danger no-round" href="/login/">立即登录</a>
                     </div>
                     <div class="level-item">
-                        <a class="button is-danger no-round" href="/login">免费注册</a>
+                        <a class="button is-danger no-round" href="/login/">免费注册</a>
                     </div>
                     {% endif %}
                 </div>

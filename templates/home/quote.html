@@ -6,39 +6,30 @@
     <div class="only-desktop" style="margin-top: 10px; margin-bottom: 30px;">
         <div style="background-image: url('/static/img/20181023161016Disl6oA1b51F8h1678.png');height: 500px;">
             <div class="login-box">
-                <h3 class="has-text-left has-text-weight-bold">会员登录</h3>
                 <form id="formdata" name="submit" method="post" action="/login/" novalidate="novalidate">
                     {% csrf_token %}
 {#                    <div class="field is-size-5"><label class="label">会员登录</label></div>#}
                     <div class="field is-horizontal">
-                        <div class="field-label is-normal compact"></div>
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="help is-danger">{{ form.non_field_errors }}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal compact"><label class="label">用户名</label></div>
+                        <div class="field-label is-normal compact"><label class="label">登陆账号</label></div>
                         <div class="field-body">
                             <div class="field">
                                 <div class="control">
                                     <input type="text" maxlength="50" tabindex="1" placeholder="会员号/手机号"
                                            name="username" id="username" class="input is-normal">
                                 </div>
-                                <div class="help is-danger">{{ form.username.errors }}</div>
+                                <p class="help is-danger">请填写登陆账号</p>
                             </div>
                         </div>
                     </div>
                     <div class="field is-horizontal">
-                        <div class="field-label is-normal compact"><label class="label">密码</label></div>
+                        <div class="field-label is-normal compact"><label class="label">登陆密码</label></div>
                         <div class="field-body">
                             <div class="field">
                                 <div class="control">
                                     <input type="password" maxlength="50" tabindex="4" placeholder="6位以上密码"
                                            name="password" id="password" class="input is-normal">
                                 </div>
-                                <div class="help is-danger">{{ form.password.errors }}</div>
+                                <p class="help is-danger">请填写登陆密码</p>
                             </div>
                         </div>
                     </div>
