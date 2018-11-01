@@ -15,9 +15,14 @@
             </div>
         </div>
         <div class="level-right">
-            <a class="button is-light is-small" href="/home/signin">登录</a>
+            {% if user.is_authenticated %}
+            <a class="is-small" href="/userinfo">{{ user.username }}</a>
+            <a class="button is-light is-small" href="/logout">退出</a>
+            {% else %}
+            <a class="button is-light is-small" href="/login">登录</a>
             <span>|</span>
-            <a class="button is-light is-small" href="/home/signup">注册</a>
+            <a class="button is-light is-small" href="/signup">注册</a>
+            {% endif %}
             <span>|</span>
             <a class="button is-light is-small" href="/">网站首页</a>
             <span>|</span>

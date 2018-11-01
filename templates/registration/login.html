@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <nav-main></nav-main>
+
+    <div class="only-desktop" style="margin-top: 10px; margin-bottom: 30px;">
+        <div style="background-image: url('/static/img/20181023161016Disl6oA1b51F8h1678.png');height: 500px;">
+            <div class="login-box">
+                <form id="formdata" name="submit" method="post" action="/login/" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="field is-size-5"><label class="label">会员登录</label></div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal compact"><label class="label">登陆账号</label></div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input type="text" maxlength="50" tabindex="1" placeholder="会员号/手机号"
+                                           name="username" id="username" class="input is-normal">
+                                </div>
+                                <p class="help is-danger">请填写登陆账号</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal compact"><label class="label">登陆密码</label></div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input type="password" maxlength="50" tabindex="4" placeholder="6位以上密码"
+                                           name="password" id="password" class="input is-normal">
+                                </div>
+                                <p class="help is-danger">请填写登陆密码</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                      <div class="field-label compact"></div>
+                      <div class="field-body">
+                        <div class="field">
+                          <div class="control is-size-7">
+                            <label class="checkbox">
+                              <input type="checkbox">
+                              7天内免登陆
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field is-horizontal">
+                      <div class="field-label compact"></div>
+                      <div class="field-body">
+                        <div class="field">
+                          <div class="control">
+                            <button class="button is-primary" type="submit" style="width: 100%;">立即登录</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field is-horizontal">
+                      <div class="field-label compact"></div>
+                      <div class="field-body">
+                        <div class="field">
+                          <div class="control is-size-7">
+                            <a style="margin-right: 5px" class="green" href="/member/index/findpwd">找回密码</a>
+                            <a style="margin-right: 5px" class="green" href="/member/index/reg">注册会员</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span id="status"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    {% include 'components/nav.html' %}
+    <script type="text/javascript">
+        new Vue({
+            delimiters:['[[', ']]'],
+            el: "#app",
+            methods: {
+
+            }
+        })
+    </script>
+{% endblock %}
