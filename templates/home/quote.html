@@ -1,89 +1,240 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <nav-main></nav-main>
-
-    <div class="only-desktop" style="margin-top: 10px; margin-bottom: 30px;">
-        <div style="background-image: url('/static/img/20181023161016Disl6oA1b51F8h1678.png');height: 500px;">
-            <div class="login-box">
-                <form id="formdata" name="submit" method="post" action="/login/" novalidate="novalidate">
-                    {% csrf_token %}
-{#                    <div class="field is-size-5"><label class="label">会员登录</label></div>#}
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal compact"><label class="label">登陆账号</label></div>
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <input type="text" maxlength="50" tabindex="1" placeholder="会员号/手机号"
-                                           name="username" id="username" class="input is-normal">
-                                </div>
-                                <p class="help is-danger">请填写登陆账号</p>
-                            </div>
-                        </div>
+    <div class="navTab-panel tabsPageContent layoutBox only-desktop">
+        <div class="page unitBox" style="margin-top: 10px;">
+            <h2 class="projectitle pl10">
+                合版报价项目 <span style="color:#FF8042;font-size: 14;">
+					(客服：夏小姐 18029066956,美工电话：18028982159,区域经理：王经理 13829177435)					</span>
+            </h2>
+            <div class="projectlist tog_price level"><div class="level-left">
+                <!--   报价item   -->
+                <a rel="project1" fresh="false" cartid="HB001" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=HB001&amp;id=1&amp;intype=web" title="">
+                    <img src="/static/img/20170605160616qWCxPDGqT3Hgwh7466.png" width="42" height="42"
+                         alt="合版名片">
+                    <div class="buttonContent"> 合版名片</div>
+                </a>
+                <a rel="project12" fresh="false" cartid="HB005" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=HB005&amp;id=12&amp;intype=web" title="">
+                    <img src="/static/img/20140815100849beUAGLmdNlrLwp5700.png" width="42" height="42" alt="PVC名片">
+                    <div class="buttonContent"> PVC名片</div>
+                </a>
+                <a rel="project14" fresh="false" cartid="HB006" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=HB006&amp;id=14&amp;intype=web" title="">
+                    <img src="/static/img/20170605170612IHipdTinW1HRxx9405.png" width="42" height="42"
+                         alt="广告纸杯">
+                    <div class="buttonContent"> 广告纸杯</div>
+                </a>
+                <a rel="project5" fresh="false" cartid="HB004" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=HB004&amp;id=5&amp;intype=web" title="">
+                    <img src="/static/img/20140819120830c3TRwgPFWckUkH4593.png" width="42" height="42" alt="特价不干胶">
+                    <div class="buttonContent"> 特价不干胶</div>
+                </a>
+                <a rel="project2" fresh="false" cartid="HB002" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=HB002&amp;id=2&amp;intype=web" title="">
+                    <img src="/static/img/20170606100631yVT8Togr7hO0TL2453.png" width="42" height="42"
+                         alt="合版彩页">
+                    <div class="buttonContent"> 合版彩页</div>
+                </a>
+                <a rel="project16" fresh="false" cartid="HB007" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=HB007&amp;id=16&amp;intype=web" title="">
+                    <img src="/static/img/20170605160622Hxi9pEnQgaEaEo8402.png" width="42" height="42"
+                         alt="合版信封">
+                    <div class="buttonContent"> 合版信封</div>
+                </a>
+                <!--   报价item   -->
+            </div></div>
+            <h2 class="projectitle pl10">
+                专版报价项目 <span style="color:#FF8042;font-size: 14;">
+					(客服：夏小姐 18029066956,美工电话：18028982159,区域经理：王经理 13829177435)					</span>
+            </h2>
+            <div class="projectlist tog_price level"><div class="level-left">
+                <!--   报价item   -->
+                <a rel="project2" fresh="false" cartid="ZB002" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB002&amp;id=2&amp;intype=web" title="">
+                    <img src="/static/img/20170606100631Vnct4aH77qXFgg123.png" width="42" height="42"
+                         alt="画册">
+                    <div class="buttonContent"> 画册</div>
+                </a>
+                <a rel="project1" fresh="false" cartid="ZB001" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB001&amp;id=1&amp;intype=web" title="">
+                    <img src="/static/img/20170606100654sQbggBF04WH45F1400.png" width="42" height="42"
+                         alt="专版彩页">
+                    <div class="buttonContent"> 专版彩页</div>
+                </a>
+                <a rel="project5" fresh="false" cartid="ZB005" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB005&amp;id=5&amp;intype=web" title="">
+                    <img src="/static/img/20170605170615DduXqVKlXcehPt8121.png" width="42" height="42"
+                         alt="手提袋">
+                    <div class="buttonContent"> 手提袋</div>
+                </a>
+                <a rel="project28" fresh="false" cartid="ZB014" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB014&amp;id=28&amp;intype=web" title="">
+                    <img src="/static/img/20170606100641x8WKkut9tGCvHW4253.png" width="42" height="42"
+                         alt="档案袋">
+                    <div class="buttonContent"> 档案袋</div>
+                </a>
+                <a rel="project4" fresh="false" cartid="ZB004" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB004&amp;id=4&amp;intype=web" title="">
+                    <img src="/static/img/20160916180956HxwSwgqFs5DISR8394.png" width="42" height="42"
+                         alt="封套">
+                    <div class="buttonContent"> 封套</div>
+                </a>
+                <a rel="project6" fresh="false" cartid="ZB006" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB006&amp;id=6&amp;intype=web" title="">
+                    <img src="/static/img/201408191308164SdQeQThTFHrYu6139.png" width="42" height="42" alt="不干胶">
+                    <div class="buttonContent"> 不干胶</div>
+                </a>
+                <a rel="project8" fresh="false" cartid="ZB007" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB007&amp;id=8&amp;intype=web" title="">
+                    <img src="/static/img/20170605170654Ryv9GiGLIIOG1D6884.png" width="42" height="42"
+                         alt="信封">
+                    <div class="buttonContent"> 信封</div>
+                </a>
+                <a rel="project9" fresh="false" cartid="ZB008" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB008&amp;id=9&amp;intype=web" title="">
+                    <img src="/static/img/20170605170653yiWpFflBE8CwtA6975.png" width="42" height="42"
+                         alt="吊牌">
+                    <div class="buttonContent"> 吊牌</div>
+                </a>
+                <a rel="project29" fresh="false" cartid="ZB015" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB015&amp;id=29&amp;intype=web" title="">
+                    <img src="/static/img/20170605170622lwoWCNNv1Tc1171600.png" width="42" height="42"
+                         alt="利是封">
+                    <div class="buttonContent"> 利是封</div>
+                </a>
+                <a rel="project27" fresh="false" cartid="ZB013" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web" title="">
+                    <img src="/static/img/201609161809252SIxlpGNswXknL2840.png" width="42" height="42"
+                         alt="无碳联单">
+                    <div class="buttonContent"> 无碳联单</div>
+                </a>
+                <a rel="project20" fresh="false" cartid="ZB011" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB011&amp;id=20&amp;intype=web" title="">
+                    <img src="/static/img/20140819130830ggbCivsxkCm02q586.png" width="42" height="42" alt="信纸表格">
+                    <div class="buttonContent"> 信纸表格</div>
+                </a>
+                <a rel="project22" fresh="false" cartid="ZB012" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB012&amp;id=22&amp;intype=web" title="">
+                    <img src="/static/img/20140819130840QLB5SPWttXK59s1609.png" width="42" height="42" alt="单张快印">
+                    <div class="buttonContent"> 单张快印</div>
+                </a>
+                <a rel="project65" fresh="false" cartid="ZB027" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=ZB027&amp;id=65&amp;intype=web" title="">
+                    <img src="/static/img/20140819130840QLB5SPWttXK59s1609.png" width="42" height="42" alt="画册快印">
+                    <div class="buttonContent"> 画册快印</div>
+                </a>
+                <!--   报价item   -->
+            </div></div>
+            <h2 class="projectitle pl10">
+                广告报价项目 <span style="color:#FF8042;font-size: 14;">
+					(咨询热线：0769-87076711)					</span>
+            </h2>
+            <div class="projectlist tog_price level"><div class="level-left">
+                <!--   报价item   -->
+                <a rel="project43" fresh="false" cartid="AD001" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD001&amp;id=43&amp;intype=web" title="">
+                    <img src="/static/img/20181019101008oTXywTV4bV8Mm24187.png" width="42" height="42"
+                         alt="室内写真">
+                    <div class="buttonContent"> 室内写真</div>
+                </a>
+                <a rel="project44" fresh="false" cartid="AD002" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD002&amp;id=44&amp;intype=web" title="">
+                    <img src="/static/img/20181019101048xoaS0LKUsH2W9C7018.png" width="42" height="42"
+                         alt="户外写真">
+                    <div class="buttonContent"> 户外写真</div>
+                </a>
+                <a rel="project74" fresh="false" cartid="AD013" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD013&amp;id=74&amp;intype=web" title="">
+                    <img src="/static/img/20181019101027x4vG1TpsiDxB2W7241.png" width="42" height="42"
+                         alt="户外喷绘">
+                    <div class="buttonContent"> 户外喷绘</div>
+                </a>
+                <a rel="project54" fresh="false" cartid="AD005" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD005&amp;id=54&amp;intype=web" title="">
+                    <img src="/static/img/20181026231057coRp5uGBQ2yHPV9268.png" width="42" height="42"
+                         alt="平板UV">
+                    <div class="buttonContent"> 平板UV</div>
+                </a>
+                <a rel="project67" fresh="false" cartid="AD009" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD009&amp;id=67&amp;intype=web" title="">
+                    <img src="/static/img/20181019111040W8ovf6hVFXYKQs1789.png" width="42" height="42"
+                         alt="展架">
+                    <div class="buttonContent"> 展架</div>
+                </a>
+                <a rel="project68" fresh="false" cartid="AD010" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD010&amp;id=68&amp;intype=web" title="">
+                    <img src="/static/img/201810191210325NPCsV0FH1gHkL8514.png" width="42" height="42"
+                         alt="易拉宝">
+                    <div class="buttonContent"> 易拉宝</div>
+                </a>
+                <a rel="project45" fresh="false" cartid="AD003" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD003&amp;id=45&amp;intype=web" title="">
+                    <img src="/static/img/20181101231110kxCmT5eKNqGtUN8098.png" width="42" height="42"
+                         alt="水晶字">
+                    <div class="buttonContent"> 水晶字</div>
+                </a>
+                <a rel="project55" fresh="false" cartid="AD006" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD006&amp;id=55&amp;intype=web" title="">
+                    <img src="/static/img/20181101231125FhhWgwBnWfGXwo2967.png" width="42" height="42"
+                         alt="PVC字">
+                    <div class="buttonContent"> PVC字</div>
+                </a>
+                <a rel="project46" fresh="false" cartid="AD004" class="projectitem selected"
+                   href="/qts/quo_price/quotation?product_code=AD004&amp;id=46&amp;intype=web" title="">
+                    <img src="/static/img/20181101231132SPEgrAhgXdkbQo7929.png" width="42" height="42"
+                         alt="条幅">
+                    <div class="buttonContent"> 条幅</div>
+                </a>
+                <a rel="project72" fresh="false" cartid="AD011" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD011&amp;id=72&amp;intype=web" title="">
+                    <img src="/static/img/20181101231105AUtkGMLR80mywv122.png" width="42" height="42"
+                         alt="锦旗/绶带">
+                    <div class="buttonContent"> 锦旗/绶带</div>
+                </a>
+                <a rel="project57" fresh="false" cartid="AD008" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD008&amp;id=57&amp;intype=web" title="">
+                    <img src="/static/img/20181101201100SLQqYMsN2bgb668783.png" width="42" height="42"
+                         alt="不干胶刻字">
+                    <div class="buttonContent"> 不干胶刻字</div>
+                </a>
+                <a rel="project76" fresh="false" cartid="AD015" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD015&amp;id=76&amp;intype=web" title="">
+                    <img src="/static/img/20181101221154wbskWXleNUAL5u1940.png" width="42" height="42"
+                         alt="金属字">
+                    <div class="buttonContent"> 金属字</div>
+                </a>
+                <a rel="project75" fresh="false" cartid="AD014" class="projectitem"
+                   href="/qts/quo_price/quotation?product_code=AD014&amp;id=75&amp;intype=web" title="">
+                    <img src="/static/img/20181101221107iAmMnnoowHylSo6503.png" width="42" height="42"
+                         alt="发光字">
+                    <div class="buttonContent"> 发光字</div>
+                </a>
+                <!--   报价item   -->
+            </div></div>
+            <h2 class="projectitle">合版名片自助报价：
+                <span>圆角名片工艺升级!暂时只能切90*54mm,90*50mm两种尺寸。只能4个圆角。其他规格建议模切。</span>
+            </h2>
+            <form style="margin-left: 10px;">
+                <div class="field">
+                    <label class="label">选择类别:</label>
+                    <div class="control">
+                        <label class="radio"><input type="radio" name="category">Yes</label>
+                        <label class="radio"><input type="radio" name="category">No</label>
                     </div>
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal compact"><label class="label">登陆密码</label></div>
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <input type="password" maxlength="50" tabindex="4" placeholder="6位以上密码"
-                                           name="password" id="password" class="input is-normal">
-                                </div>
-                                <p class="help is-danger">请填写登陆密码</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="field">
+                    <label class="label">选择材料:</label>
+                    <div class="control">
+                        <label class="radio"><input type="radio" name="material">覆哑膜铜版纸</label>
+                        <label class="radio"><input type="radio" name="question">不覆膜铜版纸</label>
                     </div>
-                    <div class="field is-horizontal">
-                      <div class="field-label compact"></div>
-                      <div class="field-body">
-                        <div class="field">
-                          <div class="control is-size-7">
-                            <label class="checkbox">
-                              <input type="checkbox">
-                              7天内免登陆
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="field is-horizontal">
-                      <div class="field-label compact"></div>
-                      <div class="field-body">
-                        <div class="field">
-                          <div class="control">
-                            <button class="button is-primary" type="submit" style="width: 100%;">立即登录</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="field is-horizontal">
-                      <div class="field-label compact"></div>
-                      <div class="field-body">
-                        <div class="field">
-                          <div class="control is-size-7">
-                            <a style="margin-right: 5px" class="green" href="/member/index/findpwd">找回密码</a>
-                            <a style="margin-right: 5px" class="green" href="/member/index/reg">注册会员</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <span id="status"></span>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
-
 {% endblock content %}
 
 {% block scripts %}
-    {% include 'components/nav.html' %}
-    <script type="text/javascript">
-        new Vue({
-            delimiters:['[[', ']]'],
-            el: "#app",
-            methods: {
-
-            }
-        })
-    </script>
 {% endblock %}

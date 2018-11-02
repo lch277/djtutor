@@ -14,15 +14,24 @@
 <body>
     <div id="app">
         {% include 'header.html' %}
-        {% block content %}
-        {% endblock %}
+
+        {% block content %} {% endblock %}
     </div>
+
     {% include 'footer.html' %}
 
     <script src="/static/vendor/js/vue.js"></script>
     {% include 'components/notification.html' %}
-    {% block scripts %}
-    {% endblock %}
+    {% include 'components/nav.html' %}
+
+    {% block scripts %} {% endblock %}
+
+    <script type="text/javascript">
+        new Vue({
+            delimiters: ['[[', ']]'],
+            el: "#app"
+        })
+    </script>
 </body>
 
 </html>

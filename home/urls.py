@@ -19,7 +19,8 @@ from django.views.generic import TemplateView
 app_name = 'home'
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home/index.html'), name='index'),
+    path('quote/', TemplateView.as_view(template_name='home/quote.html'), name='quote'),
+    path('download/', TemplateView.as_view(template_name='home/download.html'), name='download'),
     path('about/', TemplateView.as_view(template_name='home/about.html'), name='about'),
-    path('quote/', TemplateView.as_view(template_name='home/quote.html'), name='login'),
 ]
 

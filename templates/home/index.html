@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <nav-main :isactive="true"></nav-main>
 
     <div class="only-desktop" style="margin-bottom: 30px;">
         <div class="media">
@@ -255,12 +254,5 @@
 {% endblock content %}
 
 {% block scripts %}
-    {% include 'components/nav.html' %}
     {% include 'components/carousel.html' %}
-    <script type="text/javascript">
-        new Vue({
-            delimiters: ['[[', ']]'],
-            el: "#app"
-        })
-    </script>
 {% endblock %}

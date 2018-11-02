@@ -76,3 +76,25 @@
         </div>
 
 </div>
+
+
+<div class="nav-box">
+    <nav class="navbar only-desktop nav-main" role="navigation" aria-label="main navigation">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                {% url 'home:index' as home_index %}
+                {% url 'home:quote' as home_quote %}
+                {% url 'home:download' as home_download %}
+                {% url 'home:about' as home_about %}
+                <nav-main :isactive="{% if request.path == home_index %}true{% else %}false{% endif %}"></nav-main>
+                <a class="navbar-item nav-btn {% if request.path == home_index %}selected{% endif %}" href="{{ home_index }}">首页</a>
+                <a class="navbar-item nav-btn {% if request.path == home_quote %}selected{% endif %}" href="{{ home_quote }}">在线报价</a>
+                <a class="navbar-item nav-btn {% if request.path == home_download %}selected{% endif %}" href="{{ home_download }}">下载专区</a>
+                <a class="navbar-item nav-btn {% if request.path == home_about %}selected{% endif %}" href="{{ home_about }}">关于</a>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item nav-btn nav-cart">购物车</a>
+            </div>
+        </div>
+    </nav>
+</div>

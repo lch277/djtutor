@@ -313,6 +313,27 @@ a.statusa2 {
 .field-label.compact .label{
     font-size: 0.8rem;
 }
+.projectitle{
+    margin-left: 10px;
+}
+.projectitem {
+    background-color: #FFF3E5;
+    border: 1px solid #FFE18F;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 2px;
+    text-align: center;
+}.projectitem .buttonContent {
+    color: #183152;
+    width: 60px;
+    margin-top: 5px;
+    text-align: center;
+     font-size: 0.50rem;
+}
 
 
 
