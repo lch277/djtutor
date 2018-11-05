@@ -1,8 +1,55 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+    <style type="text/css">
+        .col-card {
+            height: 248px;
+            border: 1px solid #f5f5f5;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-main {
+            display: block;
+            height: 80px;
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .content-main h3 {
+            color: #31373c;
+            font-size: 16px;
+        }
+        .content-main .content-main-price {
+            display: block;
+            color: #EF4202;
+            font-size: 13px;
+        }
+        .content-main h3, .content-main .content-main-price, .content-main .content-main-text {
+            height: 22px;
+            line-height: 22px;
+        }
+        .content-img {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+        .donghua {
+            position: relative;
+            right: 0px;
+            transition: all linear 0.2s;
+            -moz-transition: all linear 0.2s;
+            -webkit-transition: all linear 0.2s;
+            -o-transition: all linear 0.2s;
+        }
+        .donghua:hover {
+            right: 4px;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
 
-    <div class="only-desktop" style="margin-bottom: 30px;">
+    <div class="only-desktop" style="padding-bottom: 30px;">
         <div class="media">
             <div class="media-content ad-slide-box" style="">
                 <carousel></carousel>
@@ -32,10 +79,10 @@
                 <div class="level">
                     {% if user.is_authenticated %}
                     <div class="level-item">
-                        <a class="button is-danger no-round" href="/userinfo/">用户中心</a>
+                        <a class="button is-danger no-round" href="#">用户中心</a>
                     </div>
                     <div class="level-item">
-                        <a class="button is-danger no-round" href="/orders/">我的订单</a>
+                        <a class="button is-danger no-round" href="#">我的订单</a>
                     </div>
                     {% else %}
                     <div class="level-item">
@@ -73,30 +120,30 @@
         <div class="level" style="margin-top: 7px;">
             {#            <div class="level-left">#}
             <div class="" style="width: 175px;height: 175px; border: 0px solid grey;">
-                <a href="/qts/quo_price/quotation?product_code=HB001&amp;id=1&amp;intype=web" title="特价爆款">
+                <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web" title="特价爆款">
                     <img width="175" height="175" src="/static/img/chanpintuijian.png" alt="特价爆款">
                 </a>
             </div>
             <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
-                <a href="/qts/quo_price/quotation?product_code=HB006&amp;id=14&amp;intype=web" title="纸杯">
+                <a href="/quote?product_code=HB006&amp;id=14&amp;intype=web" title="纸杯">
                     <img width="219" height="175" src="/static/img/3b413911e0873fc6a028acb70cd4fce4MhyrqQ9CUh12465.png"
                          alt="纸杯">
                 </a>
             </div>
             <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
-                <a href="/qts/quo_price/quotation?product_code=HB005&amp;id=12&amp;intype=web" title="高档特种纸名片">
+                <a href="/quote?product_code=HB005&amp;id=12&amp;intype=web" title="高档特种纸名片">
                     <img width="219" height="175" src="/static/img/acf33fcbd992a6a9190ac71ab51e5480cmK0eiuPxq14015.png"
                          alt="高档特种纸名片">
                 </a>
             </div>
             <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
-                <a href="/qts/quo_price/quotation?product_code=HB004&amp;id=5&amp;intype=web" title="水胶特光不干胶">
+                <a href="/quote?product_code=HB004&amp;id=5&amp;intype=web" title="水胶特光不干胶">
                     <img width="219" height="175" src="/static/img/81f7d7d3b36156b6576a8ee3578a7596oHqYtV1aiB61805.png"
                          alt="水胶特光不干胶">
                 </a>
             </div>
             <div style="width: 219px;height: 175px;margin-left: 7px; border: 0px solid grey;">
-                <a href="/qts/quo_price/quotation?product_code=ZB002&amp;id=2&amp;intype=web" title="精美铜版纸画册">
+                <a href="/quote?product_code=ZB002&amp;id=2&amp;intype=web" title="精美铜版纸画册">
                     <img width="219" height="175" src="/static/img/b2e88a8f65752b383d14fde0c315c0ebRhw8KBcn0991241.png"
                          alt="精美铜版纸画册">
                 </a>
@@ -115,10 +162,34 @@
             </div>
         </div>
         <div class="columns is-gapless">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=AD002&amp;id=44&amp;intype=web"><img alt="名片产品" src="/static/img/20180927152420_38014.png" width="430" height="246"></a>
+            </div>
+            <div class="column col-card">
+                <a class="content-main" href="/quote?product_code=ZB002&amp;id=2&amp;intype=web">
+                <h3>X展架 门型展架</h3>
+                <span class="content-main-price"> 60*160mm&nbsp; &nbsp;仅需23元一套</span> </a>
+                <div class="content-img">
+                    <a href="http://www.gdhuaya.com/quote?product_code=AD009&amp;id=67&amp;intype=web">
+                        <img alt="精美菜谱印刷" src="/static/img/20181020094840_86787.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column col-card">
+                <a class="content-main" href="/quote?product_code=ZB002&amp;id=2&amp;intype=web">
+                <h3>条幅</h3>
+                <span class="content-main-price">A级油光布,防水防晒</span> </a>
+                <div class="content-img">
+                    <a href="http://www.gdhuaya.com/quote?product_code=AD004&amp;id=46&amp;intype=web"><img alt="个性台历印刷" src="/static/img/20181020095901_47151.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column col-card">
+                <a class="content-main" href="/quote?product_code=ZB002&amp;id=2&amp;intype=web">
+                <h3>水晶字</h3>
+                <span class="content-main-price">多色可选,送安装字稿</span> </a>
+                <div class="content-img">
+                    <a href="http://www.gdhuaya.com/quote?product_code=AD006&amp;id=55&amp;intype=web"><img alt="请柬/贺卡印刷" src="/static/img/20181020101127_88744.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -132,10 +203,33 @@
             </div>
         </div>
         <div class="columns is-gapless">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=HB006&amp;id=14&amp;intype=web"><img src="/static/img/20180319160640_30844.png" alt="名片产品" width="430" height="246"></a>
+            </div>
+            <div class="column col-card" >
+                <a class="content-main" href="/default/goods/init?id=teht2hc9">
+                <h3 class="">广告纸杯</h3>
+                <span class="content-main-price">9盎司 250ml</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB006&amp;id=14&amp;intype=web"><img src="/static/img/20180319161759_33312.png" alt="名片产品" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column col-card" >
+                <a href="/default/goods/init?id=9tj1ir4r" class="content-main">
+                <h3 class="">广告纸杯</h3>
+                <span class="content-main-price">278克原木浆纸</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB006&amp;id=14&amp;intype=web"><img src="/static/img/20180321162537_76611.png" alt="名片产品" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column col-card" >
+                <a href="/default/goods/init?id=vannvkbe" class="content-main">
+                <h3 class="">广告纸杯</h3>
+                <span class="content-main-price">环保大豆油墨印刷</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB006&amp;id=14&amp;intype=web"><img src="/static/img/20180319161816_68657.png" alt="名片产品" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -149,15 +243,74 @@
             </div>
         </div>
         <div class="columns is-gapless is-multiline">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309174339_42543.png" width="430" height="246"></a>
+            </div>
+
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克冰白纸名片</h3>
+                <span class="content-main-price">13元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309101549_10578.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+		    </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克蛋壳纸名片<br></h3>
+                <span class="content-main-price">12元/盒</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309101557_31368.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克安格纸名片<br></h3>
+                <span class="content-main-price">12元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309101604_27957.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克荷兰白名片<br></h3>
+                <span class="content-main-price">12元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309100300_16607.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克磨砂水晶名片<br></h3>
+                <span class="content-main-price">16元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309101500_83207.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克磨砂铂晶名片<br></h3>
+                <span class="content-main-price">16元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309100809_80737.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克刚古纸名片<br></h3>
+                <span class="content-main-price">12元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309101444_31178.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB001&amp;id=1&amp;intype=web">
+                <h3>300克蝶影纹纸名片<br></h3>
+                <span class="content-main-price">16元/盒</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB001&amp;id=1&amp;intype=web"><img alt="名片产品" src="/static/img/20170309101435_17213.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -171,15 +324,74 @@
             </div>
         </div>
         <div class="columns is-gapless is-multiline">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=ZB005&amp;id=5&amp;intype=web"><img alt="名片产品" src="/static/img/20170327143400_36632.png" width="430" height="246"></a>
+            </div>
+
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB011&amp;id=20&amp;intype=web">
+                <h3>彩色(单色)信纸</h3>
+                <span class="content-main-price">1000张180元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB011&amp;id=20&amp;intype=web"><img alt="精美礼物彩盒" src="/static/img/20170310110849_82897.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB011&amp;id=20&amp;intype=web">
+                <h3>彩色(单色)便签表格</h3>
+                <span class="content-main-price">100本500元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB011&amp;id=20&amp;intype=web"><img alt="精美礼物彩盒" src="/static/img/20170310110450_82777.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB007&amp;id=8&amp;intype=web">
+                <h3>西式信封</h3>
+                <span class="content-main-price">1000个480元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB007&amp;id=8&amp;intype=web"><img alt="精美礼物彩盒" src="/static/img/20170316095145_29106.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB013&amp;id=27&amp;intype=web">
+                <h3>无碳联单</h3>
+                <span class="content-main-price">100本200元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB013&amp;id=27&amp;intype=web"><img alt="精美礼物彩盒" src="/static/img/20170310110420_86370.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB015&amp;id=29&amp;intype=web">
+                <h3>利是封</h3>
+                <span class="content-main-price">1000个360元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB015&amp;id=29&amp;intype=web"><img alt="精美礼物彩盒" src="/static/img/20170310105520_82608.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB014&amp;id=28&amp;intype=web">
+                <h3>档案袋</h3>
+                <span class="content-main-price">1000个1600元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB014&amp;id=28&amp;intype=web"><img alt="精美礼物彩盒" src="/static/img/20170310110430_94331.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB004&amp;id=4&amp;intype=web">
+                <h3>封套(文件夹)</h3>
+                <span class="content-main-price">1000个1300元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB004&amp;id=4&amp;intype=web"><img alt="包装精致彩盒" src="/static/img/20170310110439_13462.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB007&amp;id=8&amp;intype=web">
+                <h3>中式信封</h3>
+                <span class="content-main-price">1000个360元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB007&amp;id=8&amp;intype=web"><img alt="精美封套" src="/static/img/20170316095151_17823.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -193,10 +405,34 @@
             </div>
         </div>
         <div class="columns is-gapless is-multiline">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=HB002&amp;id=2&amp;intype=web"><img alt="名片产品" src="/static/img/20170309173237_57711.png" width="430" height="246"></a>
+            </div>
+
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB002&amp;id=2&amp;intype=web">
+                <h3>157克铜版纸单张</h3>
+                <span class="content-main-price">100元5百张A4 </span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB002&amp;id=2&amp;intype=web"><img alt="200%e5%85%8b%e9%93%9c%e7%89%88%e7%ba%b8" src="/static/img/20170309152223_27845.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB002&amp;id=2&amp;intype=web">
+                <h3>200克铜版纸单张</h3>
+                <span class="content-main-price">180元5百张A4</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB002&amp;id=2&amp;intype=web"><img alt="157克铜版纸" src="/static/img/20170309152230_35992.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=HB002&amp;id=2&amp;intype=web">
+                <h3>80克双胶纸单张</h3>
+                <span class="content-main-price">180元1千张A4</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB002&amp;id=2&amp;intype=web"><img alt="80克双胶纸" src="/static/img/20170309152239_51113.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -210,10 +446,35 @@
             </div>
         </div>
         <div class="columns is-gapless is-multiline">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=ZB002&amp;id=2&amp;intype=web"><img alt="企业画册/说明书" src="/static/img/20170309185441_65895.png" width="430" height="246"></a>
+            </div>
+
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/quote?product_code=ZB002&amp;id=2&amp;intype=web">
+                <h3>骑马钉画册</h3>
+                <span class="content-main-price">500本550元</span> <span class="content-main-text"><br></span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB002&amp;id=2&amp;intype=web"><img alt="精装画册" src="/static/img/20170309183328_89373.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/default/goods/zb?id=2">
+                <h3>胶装画册印刷</h3>
+                <span class="content-main-price">500本1800元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB002&amp;id=2&amp;intype=web"><img alt="企业画册印刷" src="/static/img/20170309183335_12275.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/default/goods/zb?id=2">
+                <h3>硬壳精装画册</h3>
+                <span class="content-main-price">500本3500元</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB002&amp;id=2&amp;intype=web"><img alt="产品画册" src="/static/img/20170309183341_63583.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -227,10 +488,34 @@
             </div>
         </div>
         <div class="columns is-gapless is-multiline">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=HB004&amp;id=5&amp;intype=webb"><img alt="名片产品" src="/static/img/20170316094447_16517.png" width="430" height="246"></a>
+            </div>
+
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/qts/quo_price/pro_quotation?id=5&amp;inclient=&amp;clienttype=&amp;intype=web">
+                <h3>不覆膜不干胶</h3>
+                <span class="content-main-price">500张10元</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB004&amp;id=5&amp;intype=webb"><img alt="名片产品" src="/static/img/20170310134320_99596.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/qts/quo_price/pro_quotation?id=5&amp;inclient=&amp;clienttype=&amp;intype=web">
+                <h3>覆亮膜不干胶<br></h3>
+                <span class="content-main-price">1000张25元</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB004&amp;id=5&amp;intype=webb"><img alt="名片产品" src="/static/img/20170310134330_56780.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/qts/quo_price/pro_quotation?id=6&amp;inclient=&amp;clienttype=&amp;intype=web">
+                <h3>啤异型不干胶<br></h3>
+                <span class="content-main-price">1000张25元</span></a>
+                <div class="content-img">
+                    <a href="/quote?product_code=HB004&amp;id=5&amp;intype=webb"><img alt="名片产品" src="/static/img/20170310135006_24617.png" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
         </div>
 
         <div class="level" style="margin-top: 36px;margin-bottom: 12px;">
@@ -244,10 +529,35 @@
             </div>
         </div>
         <div class="columns is-gapless is-multiline">
-            <div class="column is-two-fifths" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
-            <div class="column is-one-fifth" style="height: 248px;border: 1px solid #f5f5f5;"></div>
+            <div class="column is-two-fifths col-card">
+                <a href="/quote?product_code=ZB012&amp;id=22&amp;intype=web"><img src="/static/img/20170310172734_84734.png" alt="名片产品" width="430" height="246"></a>
+            </div>
+
+            <div class="column is-one-fifth col-card">
+                <a class="content-main" href="/default/goods/init?id=teht2hc9">
+                <h3 class="">个性台历</h3>
+                <span class="content-main-price">30元一本</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB012&amp;id=22&amp;intype=web"><img src="/static/img/20170310165910_63406.png" alt="名片产品" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a href="/default/goods/init?id=9tj1ir4r" class="content-main">
+                <h3 class="">个性台历</h3>
+                <span class="content-main-price">80元一本</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB012&amp;id=22&amp;intype=web"><img src="/static/img/20170310165918_19509.png" alt="名片产品" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+            <div class="column is-one-fifth col-card">
+                <a href="/default/goods/init?id=vannvkbe" class="content-main">
+                <h3 class="">快印画册</h3>
+                <span class="content-main-price">10元一本</span> </a>
+                <div class="content-img">
+                    <a href="/quote?product_code=ZB012&amp;id=22&amp;intype=web"><img src="/static/img/20170310165937_32160.png" alt="名片产品" width="214" height="183" style="margin-top:-37px;" class="donghua"></a>
+                </div>
+            </div>
+
         </div>
     </div>
 

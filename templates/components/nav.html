@@ -22,13 +22,13 @@
                                 <dt class="firstdd1" :key="group.id">
                                     <div :class="'status'+group.status"></div>
                                     <a :title="group.name"
-                                       href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web ">[[ group.name ]]</a>
+                                       href="/quote?product_code=ZB013&amp;id=27&amp;intype=web ">[[ group.name ]]</a>
                                     <div style="width:52.8px"></div>
                                 </dt>
                                 <dd class="firstdd2" v-for="item in group.items" :key="item.id">
                                     <div :class="'status'+item.status"></div>
                                     <a :title="item.name"
-                                       href="/qts/quo_price/quotation?product_code=ZB013&amp;id=27&amp;intype=web "
+                                       href="/quote?product_code=ZB013&amp;id=27&amp;intype=web "
                                        :class="'statusa'+item.status">[[ item.name ]]</a>
                                 </dd>
                             </template>
@@ -337,29 +337,5 @@
         <cate-list v-for="cate in categorys" :category="cate" :key="cate.id"></cate-list>
     </div>
 </div>`
-                    /*
-            <div class="nav-box">
-                <nav class="navbar only-desktop nav-main" role="navigation" aria-label="main navigation">
-                    <div class="navbar-menu">
-                        <div class="navbar-start">
-                            <div class="navbar-item is-hoverable nav-head has-dropdown" :class="{'is-active': isactive}">
-                                <a class="nav-head-btn navbar-link is-arrowless">
-                                    <span class="gicon"></span>
-                                    <span class="gtitle">产品分类信息</span>
-                                </a>
-                                <div class="navbar-dropdown glist">
-                                    <cate-list v-for="cate in categorys" :category="cate" :key="cate.id"></cate-list>
-                                </div>
-                            </div>
-                            <a class="navbar-item nav-btn selected" href="/">首页</a>
-                            <a class="navbar-item nav-btn">在线报价</a>
-                            <a class="navbar-item nav-btn">下载专区</a>
-                        </div>
-                        <div class="navbar-end">
-                            <a class="navbar-item nav-btn nav-cart">购物车</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>`*/
         });
     </script>

@@ -1,8 +1,92 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+    <style type="text/css">
+        .std-btn {
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 5px;
+        }
+        .browser-btn {
+            border: 1px solid #e6e6e6;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-<h1>download page</h1>
+    <div class="only-desktop" style="padding: 10px 0 30px 0;">
+        <div class="columns"><div class="column is-offset-one-third is-one-third">
+            <p class="has-text-centered title is-6" style="margin-top: 30px;">华亚推荐浏览器下载</p>
+        </div></div>
+        <div class="columns is-multiline">
+            <div class="column is-one-third has-text-centered">
+                <a target="_blank" href="http://se.360.cn/">
+                    <img class="browser-btn" src="/static/img/20180509100828_42099.jpg" alt="360浏览器"></a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a target="_blank" href="http://browser.qq.com/">
+                    <img class="browser-btn" src="/static/img/20180509100809_93248.jpg" alt="QQ浏览器"></a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a target="_blank" href="http://ie.sogou.com/">
+                    <img class="browser-btn" src="/static/img/20180509100849_11636.jpg" alt="搜狗浏览器"></a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a target="_blank" href="http://google.luozhongxu.com/">
+                    <img class="browser-btn" src="/static/img/20180509100903_59210.png" alt="谷歌浏览器"></a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a target="_blank" href="http://www.firefox.com.cn/">
+                    <img class="browser-btn" src="/static/img/20180509100930_23320.jpg" alt="火狐浏览器"></a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a target="_blank" href="http://www.ucliulanqi.org/">
+                    <img class="browser-btn" src="/static/img/20180509101000_88574.jpg" alt="UC浏览器"></a>
+            </div>
+        </div>
+        <p class="has-text-centered title is-6" style="margin-top: 30px;">华亚标准格式下载</p>
+        <div class="columns is-multiline">
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/882817972ad041a47a270bb2134ac693.cdr" target="_blank">名片制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/9c782b9cc2a59764b06a542a67e4ca7c.cdr" target="_blank">标准A型折卡制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/d9c02daa0aa79fe73a836e46da514130.cdr" target="_blank">标准B型折卡制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/0f116fd845d0e64be0837cabd3c7a806.cdr" target="_blank">标准折页制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/60d6fee4a9dfd0eff421c09de5b99a8e.cdr" target="_blank">标准西式信封</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/e19edd537304660f3cd63341d93a779e.cdr" target="_blank">标准中式信封</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/8c17e147b714c643cb86f5cccd6ca139.cdr" target="_blank">画册摆放标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/592915463704df46f8e400032f595ff0.cdr" target="_blank">封套（文件夹）制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/7062398aac3979b93a025ffd57a5f60b.cdr" target="_blank">利是封制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/53f0ae16b575384d4c7e4e373a1908df.cdr" target="_blank">手提袋制作标准</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/c870cf3218d56dcb187df4df104ac4f7.cdr" target="_blank">纸杯空白模板</a>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <a class="button is-danger std-btn" href="http://www.gdhuaya.com/upload/40251a36f1a08be0293a00b849280909.cdr" target="_blank">档案袋模版</a>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
 
 {% block scripts %}
+    {% include "components/tab.html" %}
 {% endblock %}
